@@ -1,0 +1,31 @@
+<settings>
+	<servers>
+  <server>
+    <id>emaans-domain-emaan-repo</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+<profiles>
+  <profile>
+    <id>emaans-domain-emaan-repo</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>emaans-domain-emaan-repo</id>
+        <url>https://emaans-domain-311141542374.d.codeartifact.us-east-1.amazonaws.com/maven/emaan-repo/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+<mirrors>
+  <mirror>
+    <id>emaans-domain-emaan-repo</id>
+    <name>emaans-domain-emaan-repo</name>
+    <url>https://emaans-domain-311141542374.d.codeartifact.us-east-1.amazonaws.com/maven/emaan-repo/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
